@@ -1,4 +1,5 @@
 {
+  "main": "./server/dist",
   "scripts": {
     "start": "cd ./server && node --env-file=.env dist/index.js",
     "install:deps": "cd ./server && npm install && cd ../client && npm install && cd ../",
