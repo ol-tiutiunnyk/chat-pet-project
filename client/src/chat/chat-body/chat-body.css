@@ -1,0 +1,14 @@
+.chat-body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.chat-body-input-wrapper {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.chat-body-input:focus {
+  border-color: #1976d2;
+}

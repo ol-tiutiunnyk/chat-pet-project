@@ -1,0 +1,40 @@
+.conversations-header-logout-button .door-out-arrow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conversations-header-logout-button:hover .door-out-arrow {
+  transform: translateX(6px);
+}
+.conversations-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.conversations-header-title {
+  flex: 1;
+  text-align: start;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  cursor: default;
+}
+
+.conversations-header-logout-button {
+  background: transparent;
+  color: #64a5e6;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.conversations-header-logout-button:hover {
+  color: #4976d2;
+}

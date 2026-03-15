@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express backend for chat-pet-project",
+  "main": "dist",
+  "scripts": {
+    "start": "npm run build && node --env-file=.env dist/index.js",
+    "dev": "nodemon src/index.ts",
+    "build:client": "cd ../client && npm run build",
+    "build:server": "tsc && tsc-alias",
+    "build": "npm run build:client && npm run build:server",
+    "prisma:generate": "npx prisma generate",
+    "db:push": "npx prisma db push",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0",
+    "prisma": "^7.4.2",
+    "socket.io": "^4.8.3",
+    "vite": "^7.3.1",
+    "fp-ts": "^2.16.11",
+    "io-ts": "^2.2.22"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.6.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.3.3",
+    "@types/pg": "^8.18.0",
+    "@types/supertest": "^7.2.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^7.2.2",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "vitest-mock-extended": "^3.1.0"
+  }
+}

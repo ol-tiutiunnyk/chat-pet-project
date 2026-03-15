@@ -1,0 +1,30 @@
+# Node
+node_modules/
+
+# Build
+client/build/
+prisma/generated/
+server/generated/
+prisma/migrations/
+prisma/dev.db
+prisma/dev.db-journal
+dist/
+build/
+server/dist/
+server/build/
+
+# Logs
+*.log
+.DS_Store
+Thumbs.db
+
+# dotenv
+**/.env
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+
