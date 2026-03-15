@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "cd ./server && node --env-file=.env dist/index.js",
-    "install:deps": "cd ./server && npm install && cd ../client && npm install",
-    "build": "cd ./client && npm run build && cd ../server && npm run build && npx prisma generate && npx prisma db push"
+    "install:deps": "cd ./server && npm install && cd ../client && npm install && cd ../",
+    "build": "cd ./client && npm run build && cd ../server && npm run build && npx prisma generate && npx prisma db push && cd ../"
   }
 }
