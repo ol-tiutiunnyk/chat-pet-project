@@ -19,6 +19,10 @@ app.use("/api/conversations", conversationsRouter);
 app.use("/api/messages", messagesHttpRouter);
 app.use("/api/users", usersRouter);
 
+app.use("/health", (req: Request, res: Response) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // Serve static files from client/dist
 const clientDist = path.resolve(__dirname, "../../client/dist");
 app.use(express.static(clientDist));
