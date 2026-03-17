@@ -5,7 +5,8 @@
   "description": "Express backend for chat-pet-project",
   "main": "dist",
   "scripts": {
-    "start": "npm run build && node --env-file=.env dist/index.js",
+    "start": "node dist/index.js",
+    "start:local": "node --env-file=.env dist/index.js",
     "dev": "nodemon src/index.ts",
     "build:client": "cd ../client && npm run build",
     "build:server": "tsc && tsc-alias",
