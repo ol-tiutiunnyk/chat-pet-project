@@ -11,7 +11,23 @@ import { errorHandler } from "@/core";
 
 const app = express();
 
-app.use(cors({ origin: true, credentials: true }));
+const allowedOrigins = [
+  /\.railway\.app$/,
+  /healthcheck\.railway\.app$/,
+  "http://localhost:5173",
+  "http://localhost:5000",
+];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    const isAllowed = allowedOrigins.some((o) =>
+      o instanceof RegExp ? o.test(origin) : o === origin
+    );
+    callback(null, isAllowed);
+  },
+  credentials: true,
+}));
 app.use(express.json());
 app.use(cookieParser());
 
