@@ -1,6 +1,6 @@
 import http from "http";
 
-import app from "../api/index";
+import app from "./api/index";
 import { messagesSocketsRouter } from "@/messages";
 import { SocketsServer } from "@/core";
 

@@ -40,7 +40,7 @@ app.use("/health", (req: Request, res: Response) => {
 });
 
 // Serve static files from client/dist
-const clientDist = path.resolve(__dirname, "../../client/dist");
+const clientDist = path.resolve(__dirname, "../../../client/dist");
 app.use(express.static(clientDist));
 
 // Serve index.html for all non-API, non-static requests (React Router support)
