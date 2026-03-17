@@ -11,11 +11,15 @@ import { errorHandler } from "@/core";
 
 const app = express();
 
+const PORT = process.env.PORT || 5000;
+
 const allowedOrigins = [
   /\.railway\.app$/,
   /healthcheck\.railway\.app$/,
+  "http://0.0.0.0:5173",
+  `http://0.0.0.0:${PORT}`,
   "http://localhost:5173",
-  "http://localhost:5000",
+  `http://localhost:${PORT}`,
 ];
 
 app.use(cors({
